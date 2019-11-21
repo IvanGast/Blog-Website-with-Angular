@@ -11,6 +11,8 @@ import { DashboardPageComponent } from "./dashboard-page/dashboard-page.componen
 import { SharedModule } from "../shared/shared.module";
 import { AuthGuard } from "./shared/services/auth.guard";
 import { SeacrhPipe } from "./shared/search.pipe";
+import { AlertComponent } from "./shared/components/alert/alert.component";
+import { AlertService } from "./shared/services/alert.service";
 
 @NgModule({
   imports: [
@@ -51,8 +53,9 @@ import { SeacrhPipe } from "./shared/search.pipe";
     CreatePageComponent,
     EditPageComponent,
     DashboardPageComponent,
-    SeacrhPipe
+    SeacrhPipe,
+    AlertComponent
   ],
-  providers: [AuthGuard]
+  providers: [AuthGuard, AlertService]
 })
 export class AdminModule {}

@@ -17,7 +17,6 @@ export class AuthService {
       this.logout();
       return null;
     }
-    console.log("here");
     return localStorage.getItem("fb-token");
   }
 
